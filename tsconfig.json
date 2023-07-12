@@ -21,7 +21,7 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Paths */
-    "types": ["node"],
+    "types": ["vite/client", "@emotion/react/types/css-prop", "node"],
     "paths": {
       "@/*": ["./src/*"]
     }

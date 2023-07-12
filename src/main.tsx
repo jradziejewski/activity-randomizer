@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import { store } from "@/store/store";
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
-import { customTheme } from "./theme.ts";
+import { customTheme } from "./theme/customTheme.ts";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
