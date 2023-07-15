@@ -6,14 +6,16 @@ const outerContainerStyles = (theme: Theme) => ({
   padding: theme.spacing(0, 2, 0, 2),
 });
 
-const innerContainerStyles = css({
-  backgroundColor: "lightpink",
-  maxWidth: "500px",
-  minHeight: "500px",
-  borderRadius: "25px",
-  boxShadow:
-    "rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;",
-});
+const innerContainerStyles = (theme: Theme) =>
+  css({
+    backgroundColor: theme.palette.secondary.main,
+    maxWidth: "500px",
+    minHeight: "500px",
+    border: `4px solid ${theme.palette.primary.dark}`,
+    borderRadius: "25px",
+    boxShadow:
+      "rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;",
+  });
 
 export default function MainContainerWrapper({
   children,

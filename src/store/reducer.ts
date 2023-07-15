@@ -1,22 +1,24 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const initialState = { name: "dummy", count: 0 };
+const initialState = [
+  { name: "drink", active: false },
+  { name: "music", active: false },
+  { name: "snack", active: false },
+];
 
-export const dummySlice = createSlice({
-  name: "dummy",
+export const activityOptions = createSlice({
+  name: "activityOptions",
   initialState: initialState,
   reducers: {
-    changeName: (state, action: PayloadAction<string>) => {
-      state.name = action.payload;
-    },
-    increaseCount: (state) => {
-      state.count += 1;
-    },
-    decreaseCount: (state) => {
-      state.count -= 1;
+    toggleActivityOption: (state, action: PayloadAction<string>) => {
+      const name = action.payload;
+      const option = state.find((item) => item.name === name);
+      if (option) {
+        option.active = !option.active;
+      }
     },
   },
 });
 
-export const { changeName, increaseCount, decreaseCount } = dummySlice.actions;
-export default dummySlice.reducer;
+export const { toggleActivityOption } = activityOptions.actions;
+export default activityOptions.reducer;

@@ -6,12 +6,6 @@ export const flexBetween = css({
   justifyContent: "space-between",
 });
 
-export const flexBetweenCenter = {
-  display: "flex",
-  justifyContent: { xs: "center", md: "space-between" },
-  alignItems: "center",
-};
-
 export const footerLayout = {
   display: "flex",
   flexDirection: { sx: "column" },
@@ -19,11 +13,11 @@ export const footerLayout = {
   alignItems: "center",
 };
 
-export const flexCenter = {
+export const flexCenter = css({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-};
+});
 
 export const fullWidthFlex = {
   display: "flex",
