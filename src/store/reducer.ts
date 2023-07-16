@@ -1,10 +1,18 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const initialState = [
-  { name: "drink", active: false },
-  { name: "music", active: false },
-  { name: "snack", active: false },
-];
+interface Option {
+  name: string;
+}
+
+interface ActivityOptionsState {
+  activityOptions: Option[];
+  activeOptions: string[];
+}
+
+const initialState: ActivityOptionsState = {
+  activityOptions: [{ name: "drink" }, { name: "music" }, { name: "snack" }],
+  activeOptions: [],
+};
 
 export const activityOptions = createSlice({
   name: "activityOptions",
@@ -12,9 +20,11 @@ export const activityOptions = createSlice({
   reducers: {
     toggleActivityOption: (state, action: PayloadAction<string>) => {
       const name = action.payload;
-      const option = state.find((item) => item.name === name);
-      if (option) {
-        option.active = !option.active;
+      const index = state.activeOptions.indexOf(name);
+      if (index === -1) {
+        state.activeOptions.push(name);
+      } else {
+        state.activeOptions.splice(index, 1);
       }
     },
   },
