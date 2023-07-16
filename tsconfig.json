@@ -3,11 +3,13 @@
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
+    "module": "CommonJS",
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true, // Add this line
+    "esModuleInterop": true, // Add this line
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -21,7 +23,7 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Paths */
-    "types": ["vite/client", "@emotion/react/types/css-prop", "node"],
+    "types": ["vite/client", "@emotion/react/types/css-prop", "node", "jest"],
     "paths": {
       "@/*": ["./src/*"]
     }
