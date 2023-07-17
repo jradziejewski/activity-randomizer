@@ -1,0 +1,1 @@
+export const modalMessage = `Incorporating randomness in enjoyable activities can maintain long-term enjoyment. Dopamine, a neurotransmitter related to pleasure and reward, plays a role in this. When activities become predictable, the brain adapts and enjoyment diminishes. Introducing randomness keeps the brain engaged and motivated by triggering heightened responses.`;
