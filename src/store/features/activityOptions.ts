@@ -4,7 +4,7 @@ interface Option {
   name: string;
 }
 
-interface ActivityOptionsState {
+export interface ActivityOptionsState {
   activityOptions: Option[];
   activeOptions: string[];
 }

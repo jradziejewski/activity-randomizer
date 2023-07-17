@@ -1,4 +1,4 @@
-import { toggleActivityOption } from "@/store/reducer";
+import { toggleActivityOption } from "@/store/features/activityOptions";
 import { Grid, ToggleButton } from "@mui/material";
 import { ReactNode, useState } from "react";
 import { useDispatch } from "react-redux";
