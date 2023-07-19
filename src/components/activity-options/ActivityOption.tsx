@@ -19,10 +19,19 @@ export const ActivityOption = ({
   }
 
   return (
-    <ToggleButton selected={isButtonSelected} onClick={onToggle} value={name}>
-      <Grid item container>
-        <Grid item>{name}</Grid>
+    <ToggleButton
+      selected={isButtonSelected}
+      sx={{
+        width: "100%",
+        height: 40,
+        "&.MuiToggleButton-root": { paddingTop: 2.5 },
+      }}
+      onClick={onToggle}
+      value={name}
+    >
+      <Grid item container justifyContent="center" gap={2}>
         <Grid item>{icon}</Grid>
+        <Grid item>{name}</Grid>
       </Grid>
     </ToggleButton>
   );
