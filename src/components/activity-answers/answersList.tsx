@@ -1,18 +1,18 @@
-const drinkAnswers = [
+export const drinkAnswers = [
   "water",
   "no drink",
   "your favorite drink",
   "the first drink you find in the kitchen",
 ];
 
-const musicAnswers = [
+export const musicAnswers = [
   "classical music",
   "ambient",
   "your favorite music",
   "no music",
 ];
 
-const snackAnswers = [
+export const snackAnswers = [
   "no snack",
   "fruit",
   "trail mix",

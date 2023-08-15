@@ -1,7 +1,12 @@
 import { toggleActivityOption } from "@/store/features/activityOptions";
-import { Grid, ToggleButton } from "@mui/material";
+import { Grid, ToggleButton, css } from "@mui/material";
 import { ReactNode, useState } from "react";
 import { useDispatch } from "react-redux";
+
+const toggleButtonStyles = css({
+  width: "100%",
+  height: 40,
+});
 
 export const ActivityOption = ({
   name,
@@ -20,12 +25,9 @@ export const ActivityOption = ({
 
   return (
     <ToggleButton
+      color="primary"
       selected={isButtonSelected}
-      sx={{
-        width: "100%",
-        height: 40,
-        "&.MuiToggleButton-root": { paddingTop: 2.5 },
-      }}
+      css={toggleButtonStyles}
       onClick={onToggle}
       value={name}
     >

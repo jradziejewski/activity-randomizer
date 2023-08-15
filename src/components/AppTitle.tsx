@@ -3,6 +3,12 @@ import { HelpOutline } from "@mui/icons-material";
 import { useState } from "react";
 import { modalMessage } from "./modalMessage";
 
+const appTitleStyles = css({
+  position: "absolute",
+  top: "20px",
+  textWrap: "nowrap",
+});
+
 const modalStyles = (theme: Theme) =>
   css({
     position: "absolute",
@@ -19,7 +25,14 @@ export const AppTitle = () => {
 
   return (
     <>
-      <Grid item container alignItems="center" direction="column" gap={1}>
+      <Grid
+        item
+        container
+        alignItems="center"
+        direction="column"
+        css={appTitleStyles}
+        gap={1}
+      >
         <Grid item>
           <h1>Activity Randomizer</h1>
         </Grid>

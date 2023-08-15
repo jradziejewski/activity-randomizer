@@ -1,20 +1,34 @@
-import { Grid } from "@mui/material";
+import { Grid, Theme, css } from "@mui/material";
 import { AppTitle } from "./AppTitle";
 import { Content } from "./Content";
 import { OptionButtons } from "./OptionButtons";
 
-export default function MainContainer() {
+const containerStyles = (theme: Theme) =>
+  css({
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    maxWidth: "500px",
+    minHeight: "500px",
+    border: `4px solid ${theme.palette.primary.dark}`,
+    borderRadius: "25px",
+    boxShadow:
+      "rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;",
+  });
+
+export default function MainContainerWrapper() {
   return (
-    <Grid container spacing={3} direction="column" alignItems="center">
-      <Grid item>
-        <AppTitle />
-      </Grid>
-      <Grid item>
-        <Content />
-      </Grid>
-      <Grid item>
-        <OptionButtons />
-      </Grid>
+    <Grid
+      item
+      container
+      justifyContent="center"
+      alignItems="center"
+      css={containerStyles}
+    >
+      <AppTitle />
+      <Content />
+      <OptionButtons />
     </Grid>
   );
 }

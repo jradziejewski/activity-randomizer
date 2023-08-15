@@ -1,12 +1,8 @@
-import MainContainerWrapper from "@/components/MainContainerWrapper";
+import MainContainerWrapper from "@/components/MainContainer";
 import MainContainer from "./components/MainContainer";
 
 function App() {
-  return (
-    <MainContainerWrapper>
-      <MainContainer />
-    </MainContainerWrapper>
-  );
+  return <MainContainer />;
 }
 
 export default App;
